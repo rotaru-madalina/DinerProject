@@ -185,12 +185,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: cc42824d2c5763c4696ddaac615cfa63, type: 3}
+  m_Sprite: {fileID: -907574561, guid: 4b6db0832ba2f314dbf9c7c03f45982a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.64, y: 3.27}
+  m_Size: {x: 0.9714286, y: 2.1642857}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -226,23 +226,32 @@ MonoBehaviour:
   animations:
   - name: WalkRight
     sprites:
-    - {fileID: 21300000, guid: f1fc0309fb5436646b27face953de288, type: 3}
-    speed: 0.5
+    - {fileID: 1667624193, guid: 746bd672420005c49a0ae2f821735e1d, type: 3}
+    - {fileID: 1838613312, guid: 746bd672420005c49a0ae2f821735e1d, type: 3}
+    speed: 0.2
   - name: WalkLeft
     sprites:
-    - {fileID: 21300000, guid: a8c5d14e6a1302246918f3996726b6e3, type: 3}
-    speed: 0.5
+    - {fileID: 105526200, guid: 33466ecbe99ccd84c943a3567b7d62c1, type: 3}
+    - {fileID: 944797254, guid: 33466ecbe99ccd84c943a3567b7d62c1, type: 3}
+    speed: 0.2
   - name: WalkForward
     sprites:
-    - {fileID: 21300000, guid: 956f36f19f4a6284393e086be83eed60, type: 3}
-    speed: 0.5
+    - {fileID: -907574561, guid: 4b6db0832ba2f314dbf9c7c03f45982a, type: 3}
+    - {fileID: 642541367, guid: 4b6db0832ba2f314dbf9c7c03f45982a, type: 3}
+    - {fileID: -907574561, guid: 4b6db0832ba2f314dbf9c7c03f45982a, type: 3}
+    - {fileID: -17637941, guid: 4b6db0832ba2f314dbf9c7c03f45982a, type: 3}
+    speed: 0.15
   - name: WalkBackwards
     sprites:
-    - {fileID: 21300000, guid: cc42824d2c5763c4696ddaac615cfa63, type: 3}
-    speed: 0.5
+    - {fileID: 1615225163, guid: ebb630f24fa35254c9116878e76eafde, type: 3}
+    - {fileID: -879915984, guid: ebb630f24fa35254c9116878e76eafde, type: 3}
+    - {fileID: 1615225163, guid: ebb630f24fa35254c9116878e76eafde, type: 3}
+    - {fileID: 620452020, guid: ebb630f24fa35254c9116878e76eafde, type: 3}
+    speed: 0.15
   - name: Idle
     sprites:
-    - {fileID: 21300000, guid: cc42824d2c5763c4696ddaac615cfa63, type: 3}
+    - {fileID: 1615225163, guid: ebb630f24fa35254c9116878e76eafde, type: 3}
+    - {fileID: -2114730102, guid: ebb630f24fa35254c9116878e76eafde, type: 3}
     speed: 0.5
 --- !u!114 &536022076
 MonoBehaviour:
@@ -274,8 +283,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1714286, y: 2.3357143}
-    newSize: {x: 1.64, y: 3.27}
+    oldSize: {x: 0.9714286, y: 2.3357143}
+    newSize: {x: 0.9714286, y: 2.1642857}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

@@ -12,9 +12,14 @@ public class SpriteAnimator : MonoBehaviour
     }
     public List<SpriteAnimation> animations;
     private SpriteRenderer spriteRenderer;
+    private string currentAnimation;
 
     public void PlayAnimation(string animationName)
     {
+        if(currentAnimation == animationName)
+        {
+            return;
+        }
         foreach (var animation in animations)
         {
             if(animation.name == animationName)
@@ -27,6 +32,7 @@ public class SpriteAnimator : MonoBehaviour
     }
     public IEnumerator AnimationCoroutine(SpriteAnimation animation)
     {
+        currentAnimation = animation.name;
         int currentSpriteIdx = 0;
         while(true)
         {
