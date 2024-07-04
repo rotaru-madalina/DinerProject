@@ -364,11 +364,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a2c83445ef98246915c2e0870798a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  missions:
+  - {fileID: 11400000, guid: 97bf1a43fb6ac474da80c3411e5f9598, type: 2}
+  - {fileID: 11400000, guid: 97bf1a43fb6ac474da80c3411e5f9598, type: 2}
+  - {fileID: 11400000, guid: 97bf1a43fb6ac474da80c3411e5f9598, type: 2}
+  - {fileID: 11400000, guid: 97bf1a43fb6ac474da80c3411e5f9598, type: 2}
+  - {fileID: 11400000, guid: 97bf1a43fb6ac474da80c3411e5f9598, type: 2}
   playerMask:
     serializedVersion: 2
     m_Bits: 8
   personalSpace: 0.7
+  speed: 2
+  attentionIndicator: {fileID: 0}
 --- !u!1 &371645445
 GameObject:
   m_ObjectHideFlags: 0
