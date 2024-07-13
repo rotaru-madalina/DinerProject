@@ -12,7 +12,7 @@ public class QueueingMission : Mission
 
     public override void Start()
     {
-        OnAdvanceStatusChanged.Invoke(true); // strigat, notificare abonati
+        OnAdvanceStatusChanged?.Invoke(true); // strigat, notificare abonati
     }
 
     protected override void OnEnd()
