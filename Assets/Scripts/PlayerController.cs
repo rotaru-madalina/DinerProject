@@ -53,4 +53,12 @@ public class PlayerController : MonoBehaviour
             animator.PlayAnimation("Idle");
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Customer"))
+        {
+            collision.gameObject.GetComponentInParent<Customer>().TryAdvance();
+        }
+    }
 }

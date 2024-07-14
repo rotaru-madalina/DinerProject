@@ -45,8 +45,7 @@ public class SpriteAnimator : MonoBehaviour
             yield return new WaitForSeconds(animation.speed);
         }
     }
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }

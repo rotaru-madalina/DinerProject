@@ -7,12 +7,13 @@ public class QueueingMission : Mission
 {
     public override void Advance()
     {
-
+        customer.GoToPoint(new Vector2(100, 0));
+        FindObjectOfType<Entrance>().Remove();
     }
 
     public override void Start()
     {
-        OnAdvanceStatusChanged?.Invoke(true); // strigat, notificare abonati
+        FindObjectOfType<Entrance>().Add(customer, () => OnAdvanceStatusChanged?.Invoke(true));
     }
 
     protected override void OnEnd()
