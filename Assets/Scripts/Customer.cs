@@ -26,7 +26,6 @@ public class Customer : MonoBehaviour
 
     private void Start()
     {
-        
         Init();
     }
 
@@ -103,5 +102,16 @@ public class Customer : MonoBehaviour
         if(attentionIndicator != null)
             attentionIndicator.SetActive(canAdvance); // alertam playerul
         this.canAdvance = canAdvance;
+    }
+
+    public void DelayedAction(float delay, Action callback)
+    {
+        StartCoroutine(DelayedActionRoutine(delay, callback));
+    }
+
+    private IEnumerator DelayedActionRoutine(float delay, Action callback)
+    {
+        yield return new WaitForSeconds(delay);
+        callback.Invoke();
     }
 }

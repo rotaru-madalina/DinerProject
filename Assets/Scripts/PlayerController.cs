@@ -54,9 +54,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Customer"))
+        if (collision.gameObject.CompareTag("Customer"))
         {
             collision.gameObject.GetComponentInParent<Customer>().TryAdvance();
         }

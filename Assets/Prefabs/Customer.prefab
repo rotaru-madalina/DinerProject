@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missions:
   - {fileID: 11400000, guid: 97bf1a43fb6ac474da80c3411e5f9598, type: 2}
-  - {fileID: 11400000, guid: 97bf1a43fb6ac474da80c3411e5f9598, type: 2}
+  - {fileID: 11400000, guid: 6cd544b991e09a942968dd8b1d32a997, type: 2}
   - {fileID: 11400000, guid: 97bf1a43fb6ac474da80c3411e5f9598, type: 2}
   - {fileID: 11400000, guid: 97bf1a43fb6ac474da80c3411e5f9598, type: 2}
   - {fileID: 11400000, guid: 97bf1a43fb6ac474da80c3411e5f9598, type: 2}
@@ -166,10 +166,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.021031499, y: -0.8353425}
+  m_Offset: {x: 0.027900696, y: -0.8971657}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -180,7 +180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7867062, y: 0.517113}
+  m_Size: {x: 1.2400761, y: 0.88805187}
   m_EdgeRadius: 0
 --- !u!114 &2102943143141931375
 MonoBehaviour:

@@ -7,7 +7,7 @@ public class QueueingMission : Mission
 {
     public override void Advance()
     {
-        customer.GoToPoint(new Vector2(100, 0));
+        //customer.GoToPoint(new Vector2(100, 0));
         FindObjectOfType<Entrance>().Remove();
     }
 
