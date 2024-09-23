@@ -221,6 +221,10 @@ MonoBehaviour:
     - {fileID: 1089481973, guid: 71c7ebb82e4a4e6459c2331c3ad73066, type: 3}
     - {fileID: -1909256713, guid: 71c7ebb82e4a4e6459c2331c3ad73066, type: 3}
     speed: 0.2
+  - name: Sit
+    sprites:
+    - {fileID: 21300000, guid: 408d5b8cc070dc44183d32b9e06b6623, type: 3}
+    speed: 0.2
 --- !u!1 &3017084930906875316
 GameObject:
   m_ObjectHideFlags: 0

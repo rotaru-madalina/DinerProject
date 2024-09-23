@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
+    public SpriteAnimator animator;
     public List<Mission> missions;
     private List<Mission> missionsCopy = new List<Mission>();
     public LayerMask playerMask;
@@ -15,7 +16,6 @@ public class Customer : MonoBehaviour
     public List<Color> colorList;
 
     private int currentMissionIdx = 0;
-    private SpriteAnimator animator;
     private SpriteRenderer bodySprite;
     private Mission CurrentMission => missionsCopy[currentMissionIdx]; // getter
     private bool canAdvance = false;

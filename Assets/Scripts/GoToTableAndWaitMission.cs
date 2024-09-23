@@ -14,8 +14,11 @@ public class GoToTableAndWaitMission : Mission
 
     public override void Start()
     {
-        customer.GoToPoint(table1Pos, () => 
-           customer.DelayedAction(waitDuration, () => OnAdvanceStatusChanged?.Invoke(true)));
+        customer.GoToPoint(table1Pos, () =>
+        {
+            customer.animator.PlayAnimation("Sit");
+            customer.DelayedAction(waitDuration, () => OnAdvanceStatusChanged?.Invoke(true));
+        });
     }
 
     protected override void OnEnd()
