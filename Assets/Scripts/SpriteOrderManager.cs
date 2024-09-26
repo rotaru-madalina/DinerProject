@@ -27,9 +27,9 @@ public class SpriteOrderManager : MonoBehaviour
 
     int CompareByYPosition(OrderedSprite a, OrderedSprite b)
     {
-        if (a.transform.position.y < b.transform.position.y)
+        if (a.transform.position.y + a.offsetY < b.transform.position.y + b.offsetY)
             return 1;
-        else if (a.transform.position.y > b.transform.position.y)
+        else if (a.transform.position.y + a.offsetY > b.transform.position.y + b.offsetY)
             return -1;
         else
             return 0;

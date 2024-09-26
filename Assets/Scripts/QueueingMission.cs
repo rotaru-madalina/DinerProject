@@ -13,7 +13,13 @@ public class QueueingMission : Mission
 
     public override void Start()
     {
-        FindObjectOfType<Entrance>().Add(customer, () => OnAdvanceStatusChanged?.Invoke(true));
+        FindObjectOfType<Entrance>().Add(customer, () =>
+        {
+            if (FindObjectOfType<TableManager>().GetFreeTable() == null)
+                FindObjectOfType<TableManager>().OnFreeTableAvailable += () => OnAdvanceStatusChanged?.Invoke(true);
+            else
+                OnAdvanceStatusChanged?.Invoke(true);
+        });
     }
 
     protected override void OnEnd()

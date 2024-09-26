@@ -5,19 +5,30 @@ using UnityEngine;
 
 public class GoToTableAndWaitMission : Mission
 {
-    public Vector2 table1Pos;
     public float waitDuration;
+    Table masaLaCareTreSaMerg;
     public override void Advance()
     {
+        FindObjectOfType<TableManager>().FreeTable(masaLaCareTreSaMerg);
         customer.GoToPoint(new Vector2(100, 0));
     }
 
     public override void Start()
     {
-        customer.GoToPoint(table1Pos, () =>
+        masaLaCareTreSaMerg = FindObjectOfType<TableManager>().GetFreeTable();
+
+        if (masaLaCareTreSaMerg == null)
+            return;
+
+        masaLaCareTreSaMerg.isOccupied = true;
+        Vector2 tablePos = masaLaCareTreSaMerg.sittingPoint.transform.position;
+        customer.GoToPoint(tablePos, () =>
         {
             customer.animator.PlayAnimation("Sit");
-            customer.DelayedAction(waitDuration, () => OnAdvanceStatusChanged?.Invoke(true));
+            customer.DelayedAction(waitDuration, () =>
+            {
+                OnAdvanceStatusChanged?.Invoke(true);
+            });
         });
     }
 
