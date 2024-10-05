@@ -7,6 +7,30 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rigidbody;
     SpriteAnimator animator;
     public float speed = 3f;
+    public GameObject glassRed;
+    public GameObject glassGreen;
+
+    public bool HasRedGlass
+    {
+        get => hasRedGlass;
+        set
+        {
+            glassRed.SetActive(value);
+            hasRedGlass = value;
+        }
+    }
+    public bool hasRedGlass;
+
+    public bool HasGreenGlass
+    {
+        get => hasGreenGlass;
+        set
+        {
+            glassGreen.SetActive(value);
+            hasGreenGlass = value;
+        }
+    }
+    public bool hasGreenGlass;
     // Start is called before the first frame update
     void Start()
     {
